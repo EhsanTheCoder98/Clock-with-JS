@@ -1,0 +1,17 @@
+body{
+    background-color: gray;
+}
+.clock{
+    background-color: black;
+    width: 800px;
+    height:200px;
+    margin: 20% auto;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px 1px white,
+    -5px -5px 10px 1px white;
+    color: rgb(116, 6, 6);
+    text-align: center;
+    box-sizing: border-box;
+    padding: 40px;
+    font-size: 6rem;
+}
