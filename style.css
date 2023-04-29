@@ -1,5 +1,6 @@
 body{
-    background:url(image/@Wallpaper_4K3D\ \(12430\).jpg)
+    background:url(image/@Wallpaper_4K3D\ \(12430\).jpg);
+    background-position-x: center;
 }
 .clock{
     background-color: rgba(0, 0, 0, 0.582);

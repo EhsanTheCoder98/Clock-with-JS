@@ -39,7 +39,7 @@ if(is24Hour){
 }
     let time = `${h}:${m}:${s} ${session}`
     document.querySelector(".clock").innerText = time;
-    let dateOfDay = `${year}/${month}/${day}`
+    let dateOfDay = `${month}/${day}/${year}`
     document.querySelector(".date").innerText = dateOfDay
 }
 const interval = setInterval(dateAndTime, 1000);
