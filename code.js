@@ -1,3 +1,4 @@
+let is24Hour = true;
 function dateAndTime(){
     let date = new Date()
     let h = date.getHours()
@@ -7,7 +8,7 @@ function dateAndTime(){
     let month = date.getMonth()
     let year = date.getFullYear()
     let session = "AM"
-
+if(is24Hour){
     if(h>12){
         session = "PM"
     }
@@ -20,11 +21,33 @@ function dateAndTime(){
     if(s<10){
         s = `0${s}`
     }
+}else{
+    if(h>12){
+        session = "PM"
+    }
+    h = h-12
+    if(h<10){
+        h = `0${h}`
+    }
+    if(m<10){
+        m = `0${m}`
+    }
+    if(s<10){
+        s = `0${s}`
+    }
 
-
+}
     let time = `${h}:${m}:${s} ${session}`
     document.querySelector(".clock").innerText = time;
     let dateOfDay = `${year}/${month}/${day}`
     document.querySelector(".date").innerText = dateOfDay
 }
-setInterval(dateAndTime,1000)
+const interval = setInterval(dateAndTime, 1000);
+
+document.getElementById("12").addEventListener("click", function () {
+  is24Hour = false;
+});
+
+document.getElementById("24").addEventListener("click", function () {
+  is24Hour = true;
+});
