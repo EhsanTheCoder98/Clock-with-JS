@@ -28,7 +28,3 @@ function dateAndTime(){
     document.querySelector(".date").innerText = dateOfDay
 }
 setInterval(dateAndTime,1000)
-
-let date = new Date()
-let fullDate = date.getMonth()
-console.log(fullDate)
