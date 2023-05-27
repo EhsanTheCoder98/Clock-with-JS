@@ -42,7 +42,7 @@ if(is24Hour){
     let dateOfDay = `${month}/${day}/${year}`
     document.querySelector(".date").innerText = dateOfDay
 }
-const interval = setInterval(dateAndTime, 1000);
+const interval = setInterval(dateAndTime, 100);
 
 document.getElementById("12").addEventListener("click", function () {
   is24Hour = false;
